@@ -16,9 +16,9 @@ import android.text.style.ForegroundColorSpan;
 import java.util.ArrayList;
 import java.util.List;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AlertDialog;
-import androidx.core.app.ActivityCompat;
+import android.support.annotation.NonNull;
+import android.support.v7.app.AlertDialog;
+import android.support.v4.app.ActivityCompat;
 import top.kikt.imagescanner.util.LogUtils;
 
 /**

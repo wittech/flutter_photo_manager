@@ -7,8 +7,8 @@ import com.bumptech.glide.request.target.SizeReadyCallback;
 import com.bumptech.glide.request.target.Target;
 import com.bumptech.glide.util.Util;
 
-import androidx.annotation.NonNull;
-import androidx.annotation.Nullable;
+import android.support.annotation.NonNull;
+import android.support.annotation.Nullable;
 
 /**
  * Created by debuggerx on 18-9-27 下午1:40
@@ -70,7 +70,7 @@ public abstract class CustomTarget<T> implements Target<T> {
     }
 
     @Override
-    public void onLoadFailed(@Nullable Drawable errorDrawable) {
+    public void onLoadFailed(Exception e, @Nullable Drawable errorDrawable) {
         // Intentionally empty, this can be optionally implemented by subclasses.
     }
 
@@ -79,10 +79,10 @@ public abstract class CustomTarget<T> implements Target<T> {
         cb.onSizeReady(width, height);
     }
 
-    @Override
-    public final void removeCallback(@NonNull SizeReadyCallback cb) {
-        // Do nothing, this class does not retain SizeReadyCallbacks.
-    }
+//    @Override
+//    public final void removeCallback(@NonNull SizeReadyCallback cb) {
+//        // Do nothing, this class does not retain SizeReadyCallbacks.
+//    }
 
     @Override
     public final void setRequest(@Nullable Request request) {
